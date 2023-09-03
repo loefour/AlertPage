@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <section>
+            <button class="show-modal">Show Modal</button>
+            <span class="overlay"></span>
+            <div class="modal-box">
+                <i class="fa-solid fa-exclamation fa-beat-fade"></i>
+                <h2>آیا مطمئن هستید؟</h2>
+                <h3>کاربر مورد نظر انتخاب شده است</h3>
+                <div class="buttons">
+                    <button class="accept">بله</button>
+                    <button class="deny">خیر</button>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            const section = document.querySelector("section")
+             overlay = document.querySelector(".overlay")
+             showbtn = document.querySelector(".show-modal")
+             closBtn = document.querySelector(".deny")
+
+            showbtn.addEventListener("click", () => section.classList.add("active"))
+            overlay.addEventListener("click", () => section.classList.remove("active"))
+
+            closBtn.addEventListener("click", () => section.classList.remove("active"))
+        </script>
+
+    </body>
+</html>
